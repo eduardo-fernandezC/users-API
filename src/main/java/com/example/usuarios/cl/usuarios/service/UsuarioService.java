@@ -48,7 +48,9 @@ public class UsuarioService {
                 existeUsuario.setCorreo(usuario.getCorreo());
             }
             if (usuario.getContrasenia() != null) {
-                existeUsuario.setContrasenia(usuario.getContrasenia());
+                existeUsuario.setContrasenia(
+                    passwordEncoder.encode(usuario.getContrasenia())
+                );
             }
             if (usuario.getRol() != null) {
                 existeUsuario.setRol(usuario.getRol());

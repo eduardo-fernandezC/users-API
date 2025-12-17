@@ -33,7 +33,7 @@ public class DataLoader implements CommandLineRunner {
 
         if (rolRepository.count() == 0) {
             Rol admin = new Rol(null, "ADMIN");
-            Rol user = new Rol(null, "USER");
+            Rol user = new Rol(null, "USUARIO");
 
             rolRepository.save(admin);
             rolRepository.save(user);
